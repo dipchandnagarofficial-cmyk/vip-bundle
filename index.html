@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIP Bundle</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:rgba(255,255,255,.06); --line:rgba(255,255,255,.12);
+      --txt:#e8eefc; --muted:rgba(232,238,252,.75);
+      --a:#60a5fa; --b:#34d399; --c:#fbbf24; --danger:#fb7185;
+      --shadow:0 16px 40px rgba(0,0,0,.45);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(900px 500px at 75% 0%, rgba(96,165,250,.22), transparent 60%),
+         radial-gradient(800px 500px at 20% 20%, rgba(52,211,153,.18), transparent 60%),
+         var(--bg); color:var(--txt);}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px}
+    header{padding:18px 0 6px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo span{font-weight:900}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .pill{border:1px solid var(--line);background:rgba(0,0,0,.18);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;padding:10px 0 18px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+    .hero-left{padding:18px}
+    h1{margin:10px 0 10px;font-size:32px;line-height:1.15}
+    .sub{color:var(--muted);line-height:1.55}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .badge{font-size:13px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;text-decoration:none;font-weight:800;border:1px solid var(--line)}
+    .btn.primary{background:linear-gradient(135deg,var(--a),#7c3aed);border:none}
+    .btn.outline{background:rgba(0,0,0,.18)}
+    .btn small{font-weight:600;opacity:.9}
+
+    .hero-right{padding:18px;display:grid;gap:12px}
+    .pricebox{padding:14px;border-radius:16px;border:1px dashed rgba(255,255,255,.22);background:rgba(0,0,0,.18)}
+    .strike{color:var(--danger);font-weight:900}
+    .ok{color:var(--b);font-weight:900}
+    .bigprice{font-size:34px;font-weight:950;letter-spacing:.2px}
+    .mini{color:var(--muted);font-size:13px;line-height:1.4}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .col6{grid-column:span 6}
+    .col4{grid-column:span 4}
+    .col12{grid-column:span 12}
+    @media(max-width:900px){.col6,.col4{grid-column:span 12}}
+    .section{padding:10px 0 18px}
+    .section h2{margin:0 0 10px;font-size:22px}
+    .feat{padding:14px}
+    .feat b{display:block;margin-bottom:6px}
+    .muted{color:var(--muted)}
+
+    .courses{padding:14px}
+    .course{display:flex;gap:12px;align-items:center;padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(0,0,0,.18)}
+    .thumb{width:62px;height:62px;border-radius:16px;background:linear-gradient(135deg,rgba(96,165,250,.35),rgba(52,211,153,.25));border:1px solid rgba(255,255,255,.15)}
+    .course h3{margin:0;font-size:16px}
+    .course p{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .course a{margin-left:auto}
+    .tag{font-size:12px;color:var(--c);font-weight:800}
+
+    .faq{padding:14px}
+    details{border:1px solid var(--line);background:rgba(0,0,0,.18);border-radius:16px;padding:12px}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:900}
+    details p{margin:10px 0 0;color:var(--muted);line-height:1.5}
+
+    .stickywa{
+      position:fixed; right:16px; bottom:16px;
+      padding:12px 14px; border-radius:999px; text-decoration:none;
+      background:linear-gradient(135deg,var(--b),#10b981); color:#052014; font-weight:950;
+      box-shadow:var(--shadow);
+    }
+    footer{padding:28px 0;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
+    .note{font-size:12px;color:rgba(232,238,252,.6);margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo"><span>💎</span></div>
+          <div>
+            <div style="font-weight:950">VIP Bundle</div>
+            <div class="pill">1000+ Courses • eBooks • Lifetime Updates</div>
+          </div>
+        </div>
+        <div class="pill">Instant Access • Support on WhatsApp</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card hero-left">
+        <div class="badge" style="display:inline-block;border-color:rgba(96,165,250,.35);color:#cfe4ff;background:rgba(96,165,250,.12)">NEW • Best Value Bundle</div>
+        <h1>₹10 Lakhs+ Worth Courses<br/>Only <span style="color:var(--b)">₹999 Lifetime</span> ✅</h1>
+        <p class="sub">Join once. Learn forever 🚀 — Business, Ecommerce, AI, Editing, Trading, Freelancing aur bahut kuch.</p>
+        <div class="badges">
+          <div class="badge">✅ Lifetime Access</div>
+          <div class="badge">🔄 Future Updates Free</div>
+          <div class="badge">📲 Mobile Friendly</div>
+          <div class="badge">⚡ Fast Website</div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" id="buyBtn" href="#" target="_blank">👉 Chat / Purchase <small>(WhatsApp)</small></a>
+          <a class="btn outline" href="#courses">📚 View Courses</a>
+        </div>
+        <div class="note">*Price, content aur access method aap apne hisaab se change kar sakte ho.</div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="pricebox">
+          <div class="strike">❌ Total Price (Market): ₹10,00,000+</div>
+          <div class="ok" style="margin-top:8px">✅ Our Price:</div>
+          <div class="bigprice">₹999</div>
+          <div class="mini">Lifetime Access • Instant Delivery • Support Included</div>
+        </div>
+        <div class="pricebox">
+          <div style="font-weight:900">Not sure yet?</div>
+          <div class="mini">Pehle info lo, phir decision lo 🙂</div>
+          <div class="cta" style="margin-top:10px">
+            <a class="btn outline" id="demoBtn" href="#" target="_blank">🎁 Ask for Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card feat col4">
+          <b>Premium Look</b>
+          <div class="muted">Clean cards, spacing, fast loading.</div>
+        </div>
+        <div class="card feat col4">
+          <b>Easy Update</b>
+          <div class="muted">Aap course list kabhi bhi edit kar sakte ho.</div>
+        </div>
+        <div class="card feat col4">
+          <b>Direct Access</b>
+          <div class="muted">Telegram/Drive links ko “Access Now” se open karwa sakte ho.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card courses" id="courses">
+      <h2>Popular Courses <span class="tag">(Example)</span></h2>
+
+      <div class="course">
+        <div class="thumb"></div>
+        <div>
+          <h3>Ecommerce Business Workshop</h3>
+          <p>Start & scale your ecommerce business (Beginner friendly)</p>
+        </div>
+        <a class="btn outline" href="https://t.me/yourlink" target="_blank">Access Now</a>
+      </div>
+
+      <div class="course" style="margin-top:10px">
+        <div class="thumb"></div>
+        <div>
+          <h3>Amazon Seller Mastery</h3>
+          <p>Listing, ads, sourcing, scaling — full roadmap</p>
+        </div>
+        <a class="btn outline" href="https://t.me/yourlink" target="_blank">Access Now</a>
+      </div>
+
+      <div class="course" style="margin-top:10px">
+        <div class="thumb"></div>
+        <div>
+          <h3>AI Tools & Earning</h3>
+          <p>AI se content + income workflows</p>
+        </div>
+        <a class="btn outline" href="https://t.me/yourlink" target="_blank">Access Now</a>
+      </div>
+
+      <p class="muted" style="margin:12px 0 0">*Aap yahan jitne course chahe add kar sakte ho (copy-paste karke).</p>
+    </section>
+
+    <section class="section card faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Access kaise milega?</summary>
+        <p>Payment ke baad WhatsApp/Telegram par aapko access link mil jayega (ya aap automation bhi set kar sakte ho).</p>
+      </details>
+      <details>
+        <summary>Lifetime access ka matlab?</summary>
+        <p>Ek baar join karne ke baad aapko future updates bhi milenge (aapke rules ke hisaab se).</p>
+      </details>
+      <details>
+        <summary>Support?</summary>
+        <p>WhatsApp support button se aap direct message kar sakte ho.</p>
+      </details>
+    </section>
+
+    <footer>
+      © <span id="y"></span> VIP Bundle • All rights reserved
+    </footer>
+  </div>
+
+  <a class="stickywa" id="waSticky" href="#" target="_blank">WhatsApp</a>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // ✅ IMPORTANT: yahan apna number aur message set karo
+    const phone = "91XXXXXXXXXX"; // example: 919876543210
+    const buyMsg = "Hi! Mujhe VIP Bundle ka Lifetime Access chahiye. Price ₹999. Payment details bhejo.";
+    const demoMsg = "Hi! Kya aap demo access / course list share kar sakte ho?";
+
+    const waBuy = `https://wa.me/${phone}?text=${encodeURIComponent(buyMsg)}`;
+    const waDemo = `https://wa.me/${phone}?text=${encodeURIComponent(demoMsg)}`;
+
+    document.getElementById("buyBtn").href = waBuy;
+    document.getElementById("demoBtn").href = waDemo;
+    document.getElementById("waSticky").href = waBuy;
+  </script>
+</body>
+  </html>
